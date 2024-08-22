@@ -1,0 +1,23 @@
+service: weather-data-service
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  environment:
+    MONGO_URI: ${env:MONGO_URI}
+    WEATHER_API_KEY: ${env:WEATHER_API_KEY}
+
+functions:
+  weatherUpdate:
+    handler: dist/lambdas/weatherUpdateLambda.weatherUpdate
+    events:
+      - schedule: rate(24 hours) # Runs every 24 hours
+
+plugins:
+  - serverless-dotenv-plugin
+
+package:
+  exclude:
+    - node_modules/**
+  include:
+    - dist/**
