@@ -1,6 +1,12 @@
 # smartnode_practical
 Personalized Greetings &amp; Weather Data System with Location-Based Sunrise/Sunset Tracking.
 
+Working Project Video
+
+Click on below for Gdrive link
+
+https://drive.google.com/file/d/1LjKHWiC0z1TKSw8jWYeqM64Iq6F973vi/view?usp=sharing
+
 ## Technologies
 
 - **Node.js**: JavaScript runtime for server-side programming
